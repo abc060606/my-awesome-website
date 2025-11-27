@@ -14,7 +14,7 @@ function createLove() {
     // 创建爱心元素（用文字“❤️”作为爱心，无需图片）
     const love = document.createElement('div');
     love.className = 'love';
-    love.textContent = '❤️';
+    love.textContent = 'GAY';
 
     // 随机爱心大小（12px ~ 36px）
     const size = Math.random() * 24 + 12;

@@ -1,11 +1,66 @@
+/* 页面整体样式（可选，让布局更美观） */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    text-align: center;
-    padding: 50px;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f2f5;
 }
 
 h1 {
-    color: #007bff;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* “abc”按钮样式 */
+#loveBtn {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4499;
+    /* 粉色按钮，可修改颜色 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* 按钮 hover 效果（鼠标悬浮时） */
+#loveBtn:hover {
+    background-color: #ff2288;
+    transform: scale(1.05);
+    /* 轻微放大 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 爱心动画样式（核心） */
+.love {
+    position: fixed;
+    color: #ff0066;
+    /* 爱心颜色 */
+    font-size: 24px;
+    opacity: 0;
+    /* 初始透明 */
+    animation: loveFall 3s linear forwards;
+    /* 下落动画 */
+    pointer-events: none;
+    /* 避免遮挡按钮 */
+}
+
+/* 爱心下落动画关键帧 */
+@keyframes loveFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(80vh) rotate(720deg);
+        /* 下落并旋转 */
+        opacity: 0;
+    }
 }
