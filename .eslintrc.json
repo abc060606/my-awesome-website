@@ -1,0 +1,4 @@
+// .eslintrc.json
+{
+    "extends": ["eslint:recommended", "prettier"]
+}
